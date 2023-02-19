@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login: BFB</title>
+
+    <!-- Tailwind CDN File Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; min-height: 100vh; width: 100%;" class="flex flex-col justify-center">
+    <!-- Header Content -->
+    <header>
+        <h1 class="text-4xl font-bold uppercase text-blue-400 text-center my-10">Welcome to: <span
+                class="text-orange-500">Bank For Beginner!</span></h1>
+    </header>
+
+    <main>
+        <!-- Bank Section Here -->
+        <section class="w-11/12 md:w-9/12 mx-auto mb-20">
+            <!-- Account Information -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-5 text-white">
+                <div class="bg-green-400 shadow-lg shadow-green-400/50 p-10 rounded-xl">
+                    <p class="text-3xl font-semibold">Deposit</p>
+                    <h1 class="text-3xl font-semibold">$<span id="deposit">00</span></h1>
+                </div>
+                <div class="bg-red-400 shadow-lg shadow-red-400/50 p-10 rounded-xl">
+                    <p class="text-3xl font-semibold">Withdraw</p>
+                    <h1 class="text-3xl font-semibold">$<span id="withdraw">00</span></h1>
+                </div>
+                <div class="bg-indigo-400 shadow-lg shadow-indigo-400/50 p-10 rounded-xl">
+                    <p class="text-3xl font-semibold">Balance</p>
+                    <h1 class="text-3xl font-semibold">$<span id="balance">00</span></h1>
+                </div>
+            </div>
+
+            <!-- User Input -->
+            <div class="mt-10 pt-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7 text-gray-700">
+                <div class="bg-orange-300 shadow-lg shadow-orange-300/50 p-10 rounded-xl">
+                    <p class="text-2xl font-medium mb-2">Please Deposit</p>
+                    <input id="deposit-input" class="text-lg py-2 px-4 rounded-md w-full outline-2 outline-gray-500/75" type="text" placeholder="$ Amount you want to deposit">
+                    <button id="deposit-btn" class="mt-4 bg-gray-500 hover:bg-gray-600 hover:shadow-lg hover:shadow-gray-500/30 font-medium py-2 px-4 rounded-md text-xl text-white">Deposit</button>
+                </div>
+                <div class="bg-orange-300 shadow-lg shadow-orange-300/50 p-10 rounded-xl">
+                    <p class="text-2xl font-medium mb-2">Please Withdraw</p>
+                    <input id="withdraw-input" class="text-lg py-2 px-4 rounded-md w-full outline-2 outline-gray-500/75" type="text" placeholder="$ Amount you want to withdraw">
+                    <button id="withdraw-btn" class="mt-4 bg-gray-500 hover:bg-gray-600 hover:shadow-lg hover:shadow-gray-500/30 font-medium py-2 px-4 rounded-md text-xl text-white">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/bank.js"></script>
+</body>
+
+</html>
