@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login: BFB</title>
+
+    <!-- Tailwind CDN File Link -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
-<body class="font-sans">
+
+<body style="font-family: 'Poppins', sans-serif;">
     <!-- Header Content -->
     <header>
-        <h1 class="text-3xl font-bold uppercase text-blue-500 text-center my-7">Login Here: <span class="text-orange-500">Bank For Beginner!</span></h1>
+        <h1 class="text-3xl font-bold uppercase text-blue-400 text-center my-7">Login Here: <span
+                class="text-orange-500">Bank For Beginner!</span></h1>
     </header>
 
     <!-- Login Form Here -->
     <main>
-        
+        <section class="w-9/12 bg-blue-100 mx-auto rounded-xl p-10">
+            <div class="w-7/12 mx-auto p-5 bg-white shadow-md rounded-xl">
+                <h1 class="font-medium text-2xl text-orange-500">Login your account:</h1>
+                <hr class="my-2">
+
+                <input
+                    class="block w-full mt-1 outline-2 outline-blue-500/75 p-2 text-lg border border-blue-100 rounded-lg text-gray-600"
+                    id="user-email" type="email" placeholder="Enter email...">
+                <span id="email-error" class="mb-5 hidden text-red-600">*Incorrect email address</span>
+
+                <input
+                    class="block w-full mt-3 outline-2 outline-blue-500/75 p-2 text-lg border border-blue-100 rounded-lg text-gray-600"
+                    id="user-password" type="password" placeholder="Enter password...">
+                <span id="password-error" class="mb-5 hidden text-red-600">*Incorrect password</span>
+
+                <button id="login-btn"
+                    class="text-lg text-white bg-blue-400 w-full rounded-lg p-1 mt-4 hover:bg-blue-500">Log In</button>
+                <div class="text-sm text-gray-500 mt-3">
+                    <p class="text-green-600 ">Note: Use this information for login</p>
+                    <span class="mr-2"><small class="text-sm text-red-600 font-medium">Password:</small> 12345</span>
+                    <span><small class="text-sm text-red-600 font-medium">Email:</small> admin@gmail.com</span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script src="js/login.js"></script>
 </body>
+
 </html>
