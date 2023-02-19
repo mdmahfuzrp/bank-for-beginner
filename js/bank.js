@@ -1,3 +1,30 @@
+
+// Popup
+const popup = document.getElementById('popup');
+const popupParent = document.getElementById('popup-parent');
+const popupContainer = document.getElementById('popup-container');
+const popupButton = document.getElementById('popupButton');
+popup.style.display = 'none';
+popupContainer.style.display = 'none';
+popupParent.style.display = 'none';
+
+function popupFunction(innerTextChange){
+    const warningMsg = document.getElementById('warning-msg');
+    warningMsg.innerText = innerTextChange;
+
+    popup.style.display = 'block';
+        popupContainer.style.display = 'block';
+        popupParent.style.display = 'block';
+        popupButton.addEventListener('click', function () {
+            popup.style.display = 'none';
+            popupContainer.style.display = 'none';
+            popupParent.style.display = 'none';
+        })
+}
+
+
+
+
 // Deposit all operatioons
 const depositBtn = document.getElementById('deposit-btn');
 depositBtn.addEventListener('click', function(){
@@ -23,7 +50,9 @@ depositBtn.addEventListener('click', function(){
     }
 // error message
     else{
-        alert("hello");
+        const innerTextChange = `Sorry sir, you dont deposit this type of amount now!!
+        Please enter a valid amount who will correct amount for deposit, And also you can try again.`;
+        popupFunction(innerTextChange);
     }
 })
 
@@ -73,7 +102,8 @@ withdrawBtn.addEventListener('click', function(){
 
 // Error Message
     else{
-        alert("You Don't have enough money!")
+        const innerTextChange = `Sorry sir, You don't have enough money. You can contact with your account manager and also bank manager. You can try again after few seconds!`;
+        popupFunction(innerTextChange);
         withdrawInput.value = '';
     }
 })
@@ -87,3 +117,4 @@ function minusTotalBalance(newWithdraw){
     const withdrawNewBalance = totalBalanceValue - newWithdraw;
     totalBalanceElement.innerHTML = withdrawNewBalance;
 }
+
